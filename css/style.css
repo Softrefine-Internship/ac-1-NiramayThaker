@@ -5,21 +5,217 @@
   width: 100%;
 }
 
+.hr-line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: rgba(128, 128, 128, 0.22);
+  margin: 1.6rem 0;
+}
+
 .project__section {
   grid-column: 2;
   grid-row: 2;
-  height: 96%;
+  height: 99.2%;
   width: 100%;
   background-color: #FFF;
-  border-radius: 3rem;
-  box-shadow: 0rem 0.1rem 2rem rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+  border-radius: 3rem 3rem 0 0;
   margin-left: 1.5rem;
+  margin-top: 1rem;
 }
+.project__section--project {
+  height: 100%;
+  padding: 3rem 3rem;
+  padding-bottom: 0;
+}
+.project__section--project-head {
+  height: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project__section--project-head :first-child {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #151522;
+}
+.project__section--project-head :last-child {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #151522;
+}
+.project__section--project-detail {
+  margin-top: 3rem;
+  display: flex;
+  gap: 8.4rem;
+}
+.project__section--project-detail--item {
+  position: relative;
+}
+.project__section--project-detail--item :first-child {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.project__section--project-detail--item :last-child {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: rgb(125.45, 125.45, 125.45);
+}
+.project__section--project-detail--item:not(:nth-child(4))::after {
+  content: "";
+  height: 0.2rem;
+  width: 0.2rem;
+  border: 0.2rem solid rgb(125.45, 125.45, 125.45);
+  position: absolute;
+  border-radius: 20%;
+  top: 2.6rem;
+  left: 10rem;
+  transform: rotate(45deg);
+}
+.project__section--project-detail--icn {
+  display: flex;
+  gap: 2rem;
+  margin-left: auto;
+}
+.project__section--project-detail--icn-1 {
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  transition: all 0.3s;
+}
+.project__section--project-detail--icn-1:hover {
+  transform: scale(1.2);
+}
+.project__section--project-detail--icn-more-menu {
+  margin-top: 0.3rem;
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-wrap: wrap;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.project__section--project-detail--icn-more-menu-2 {
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  border: 0.3rem solid #151522;
+}
+.project__section--project-detail--icn-more-menu:hover {
+  transform: scale(1.2);
+}
+.project__section--project-progress {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.7rem;
+}
+.project__section--project-progress-container {
+  margin-top: 4rem;
+  border-radius: 3rem;
+  padding: 2.4rem 1.4rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 26rem;
+  height: 26rem;
+}
+.project__section--project-progress-head {
+  font-size: 1.2rem;
+  color: rgb(125.45, 125.45, 125.45);
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+.project__section--project-progress-head-menu-dots {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  background-color: #151522;
+}
+.project__section--project-progress-head-menu-dots:first-child {
+  margin-bottom: 0.2rem;
+}
+.project__section--project-progress-center {
+  margin-top: 3.2rem;
+  text-align: center;
+}
+.project__section--project-progress-center-main {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.project__section--project-progress-center-sub {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(125.45, 125.45, 125.45);
+}
+.project__section--project-progress-bar {
+  margin-top: 2rem;
+  width: 100%;
+}
+.project__section--project-progress-bar--title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.project__section--project-progress-bar--bar {
+  margin: 0.7rem 0;
+  width: 100%;
+  height: 0.8rem;
+  border-radius: 8rem;
+  background-color: rgba(128, 128, 128, 0.241);
+  position: relative;
+}
+.project__section--project-progress-bar--bar::after {
+  content: "";
+  height: 0.8rem;
+  width: 90%;
+  border-radius: 8rem;
+  position: absolute;
+  left: 0;
+  background-color: cyan;
+}
+.project__section--project-progress-bar--percent {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: end;
+}
+.project__section--project-progress-users {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project__section--project-progress-users-user-icn {
+  height: 2.4rem;
+  width: 2.4rem;
+  fill: cyan;
+}
+.project__section--project-progress-users-user-imgs-img {
+  height: 2.4rem;
+  width: 2.4rem;
+  border-radius: 50%;
+  border: 0.2rem solid #FFF;
+}
+.project__section--project-progress-users-user-imgs-img:nth-child(2) {
+  margin-left: -1rem;
+}
+.project__section--project-progress-users-days-left {
+  background-color: #B4F1CE;
+  padding: 1rem 1.2rem;
+  font-size: 1.2rem;
+  border-radius: 3.2rem;
+  font-weight: bold;
+  color: rgb(10.0674157303, 53.9325842697, 28.7640449438);
+  width: 40%;
+  text-align: center;
+}
+
 /* Top header */
 .logo {
-  width: 8rem;
+  width: 6rem;
   height: 8rem;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .vr-break {
@@ -37,7 +233,7 @@
   display: flex;
   border-radius: 2.5rem;
   overflow: hidden;
-  width: 30rem;
+  width: 50rem;
 }
 .nav__header--search-input {
   border: none;
@@ -80,11 +276,11 @@
 }
 .nav__header--top-mid {
   display: flex;
-  gap: 6rem;
+  gap: 8rem;
   align-items: center;
   font-size: 2.8rem;
   font-weight: bold;
-  margin-left: 6rem;
+  margin-left: 4rem;
 }
 .nav__header--top-left {
   margin-left: auto;
@@ -208,8 +404,8 @@ img {
   background-color: rgb(235.8707865169, 251.4292134831, 242.502247191);
   border-radius: 3rem;
   display: grid;
-  grid-template-columns: 6rem 0.7fr 0.5fr;
-  grid-template-rows: 8rem 1fr;
+  grid-template-columns: 6rem 7fr 3fr;
+  grid-template-rows: 6.4rem 1fr;
 }
 
 /*# sourceMappingURL=style.css.map */

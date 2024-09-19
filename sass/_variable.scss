@@ -3,8 +3,10 @@ $color-black: #151522;
 $color-white: #FFF;
 
 $color-grey: grey;
+$color-light-grey: darken($color: grey, $amount: 1%);
 
 $color-box-grey-light: #E9E7FD;
+$color-box-grey-bg-light: rgba(128, 128, 128, 0.241);
 $color-box-grey-dark: #F3F6FD;
 
 $color-box-light-green: #B4F1CE;
