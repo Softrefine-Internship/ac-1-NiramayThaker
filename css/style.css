@@ -12,7 +12,8 @@
   width: 100%;
   background-color: #FFF;
   border-radius: 3rem;
-  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0rem 0.1rem 2rem rgba(0, 0, 0, 0.1);
+  margin-left: 1.5rem;
 }
 /* Top header */
 .logo {
@@ -207,7 +208,7 @@ img {
   background-color: rgb(235.8707865169, 251.4292134831, 242.502247191);
   border-radius: 3rem;
   display: grid;
-  grid-template-columns: 8rem 0.7fr 0.5fr;
+  grid-template-columns: 6rem 0.7fr 0.5fr;
   grid-template-rows: 8rem 1fr;
 }
 
