@@ -15,16 +15,17 @@
 .project__section {
   grid-column: 2;
   grid-row: 2;
-  height: 99.2%;
+  height: 100%;
   width: 100%;
+  height: auto;
   background-color: #FFF;
-  overflow-y: scroll;
   border-radius: 3rem 3rem 0 0;
   margin-left: 1.5rem;
   margin-top: 1rem;
+  overflow: hidden;
 }
 .project__section--project {
-  height: 100%;
+  height: 50%;
   padding: 3rem 3rem;
   padding-bottom: 0;
 }
@@ -107,11 +108,13 @@
   transform: scale(1.2);
 }
 .project__section--project-progress {
-  height: 80%;
+  height: 45%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  overflow-y: scroll;
   gap: 1.7rem;
+  justify-content: start;
 }
 .project__section--project-progress-container {
   margin-top: 4rem;
