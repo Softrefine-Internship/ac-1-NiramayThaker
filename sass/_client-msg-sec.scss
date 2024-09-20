@@ -1,6 +1,93 @@
-.client__msg__section {
+.msg__section {
     grid-column: 3;
     grid-row: 2;
     height: 100%;
     width: 100%;
+    margin-left: 1.8rem;
+    
+    &--header {
+        border-bottom: .1rem solid grey;
+        padding: 2rem 2rem;
+        display: flex;
+        margin-top: 2rem;
+        justify-content: space-between;
+        align-items: center;
+        
+        &-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        &-icns {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            
+            &-icn {
+                cursor: pointer;
+
+                &-search {
+                    height: 2rem;
+                    width: 2rem;
+                    transition: transform .3s;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+
+    &--lobby {
+        &-msgs {
+
+            &--msg {
+
+                display: flex;
+                align-items: center;
+                gap: 1.8rem;
+                padding: 2rem;
+                border-bottom: .1rem solid lighten(grey, 35%);
+                
+                &-profile-photo {
+                    height: 4.5rem;
+                    width: 4.5rem;
+                    border-radius: 50%;
+                }
+                
+                &-star-icn {
+                    height: 1.6rem;
+                    width: 1.6rem;
+                    margin-left: auto;
+                    margin-top: -2rem;
+                }
+                
+                &-block {
+
+                    &-username {
+                        margin-bottom: .5rem;
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    &-outlook {
+                        font-size: 1.1rem;
+                        font-weight: bold;
+                        line-height: 1.5;
+                        color: $color-grey;
+                    }
+
+                    &-date {
+                        text-align: end;
+                    }
+                }
+
+            }
+
+        }
+    }
+
 }

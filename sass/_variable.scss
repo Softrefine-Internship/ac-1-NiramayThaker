@@ -12,3 +12,12 @@ $color-box-grey-dark: #F3F6FD;
 $color-box-light-green: #B4F1CE;
 $color-box-light-pink: #FDE5CC;
 $color-box-dark-pink: #FFD3E2;
+$color-box-pink: pink;
+
+
+$color-box-green-light: lighten(green, 20%);
+$color-box-orange: orangered;
+$color-box-orange-light: lighten($color: orangered, $amount: 40%);
+$color-box-cyan: cyan;
+$color-box-cyan-light: lighten($color: cyan, $amount: 40%);
+

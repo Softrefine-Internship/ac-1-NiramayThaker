@@ -19,6 +19,7 @@ img {
     width: 100vw;
     height: 100vh;
     background-color:lighten(#DAD4EF, 2%);
+    z-index: 1000;
 }
 
 .main-container {
@@ -34,5 +35,6 @@ img {
     
     display: grid;
     grid-template-columns: 6rem 7fr 3fr;
-    grid-template-rows: 6.4rem 1fr;
+    grid-template-rows: 6.4rem 8fr;
+    overflow: hidden;
 }
