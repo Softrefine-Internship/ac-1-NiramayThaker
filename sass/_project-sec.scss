@@ -12,17 +12,30 @@
 .project__section {
     grid-column: 2;
     grid-row: 2;
-    height: 50vh;
     width: 100%;
-    height: 99.2%;
+    height: 78vh;  
     background-color: $color-white;
     border-radius: 3rem 3rem 0 0;
     margin-left: 1.5rem;
     margin-top: 1rem;
+    
+    @media (max-width: 75em) {
+        height: 83vh;  
+        border-radius: 3rem 3rem 0 0;
+    }
+
+    @media (max-width: 50em) {
+        height: 100vh;  
+        border-radius: 3rem 3rem 0 0;
+    }
 
     &--project {
         padding: 3rem 3rem;
         padding-bottom: 0;
+        
+        @media (max-width: 24em) {
+            padding: 2rem 1rem;
+        }
         
         &-head {
             padding: 0 2rem;
@@ -53,6 +66,14 @@
             gap: 8.4rem;
             position: relative;
             
+            @media (max-width: 72em) {
+                gap: 2rem;
+            }
+            
+            @media (max-width: 35em) {
+                gap: 1rem;
+            }
+            
             &--item {
 
                 position: relative;
@@ -60,15 +81,27 @@
                 :first-child {
                     font-size: 1.6rem;
                     font-weight: bold;
-                }
+                    
+                    @media (max-width: 35em) {
+                        font-size: 1.4rem;
+                    }   
 
+                    @media (max-width: 25em) {
+                        font-size: 1.2rem;
+                    }   
+                }
+                
                 :last-child {
                     margin-top: .5rem;
                     font-size: 1.1rem;
                     font-weight: bold;
                     color: $color-light-grey;
+                    
+                    @media (max-width: 25em) {
+                        font-size: 1rem;
+                    }   
                 }
-                
+
                 &:not(:nth-child(4)) {
                     &::after {
                         content: "";
@@ -80,15 +113,26 @@
                         top: 2.6rem;
                         left: 10rem;
                         transform: rotate(45deg);
+
+                        @media (max-width: 72em) {
+                            opacity: 0;
+                            visibility: 0;
+                        }
                     }
+
                 }
             }
 
             &--icn {
                 display: flex;
                 gap: 2rem;
+                // align-items: center;
                 margin-left: auto;
-                
+
+                @media (max-width: 25em) {
+                    gap: .5rem;
+                }   
+
                 &-1 {
                     cursor: pointer;
                     height: 2rem;
@@ -98,6 +142,7 @@
                     &:hover {
                         transform: scale(1.2);
                     }
+                    
                 }
 
                 &-more-menu {
@@ -107,7 +152,7 @@
                     height: 1.5rem;
                     flex-wrap: wrap;
                     cursor: pointer;
-                    transition: all .3s;
+                    transition: all .3s;   
 
                     &:hover {
                         transform: scale(1.2);
@@ -124,15 +169,29 @@
         }
 
         &-progress {
-            height: 62vh;
+            height:62vh;
             width: 100%;
             display: flex;
             flex-wrap: wrap;
             overflow-y: scroll;
-            gap: 1.6vw;
+            gap: 2.5rem;
             justify-content: space-evenly;
             margin-top: 1rem;
             padding-top: 3rem;
+
+            
+            @media (max-width: 64em) {
+                height: 80vh;  
+            }
+
+            @media (max-width: 50em) {
+                height: 100vh;  
+            }
+
+            
+            @media (max-width: 35em) {
+                gap: 1.6rem;
+            }
 
             &::-webkit-scrollbar {
                 display: none;
@@ -141,21 +200,78 @@
             &-container {
                 border-radius: 3rem;
                 padding: 2.4rem 1.4rem;
-                margin-bottom: 1.6vh;
+                margin-bottom: 2.5rem;
                 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                 width: 24rem;
                 height: 26rem;
+                cursor: pointer;
+                transition: all .3s;
+                position: relative;
+                
+                @media (max-width: 59em) {
+                    width: 20rem;
+                    height: 24rem;
+                }
+
+                @media (max-width: 25em) {
+                    width: 26rem;
+                    height: 26rem;
+                }
+                
+                &::before {
+                    content: "";
+                    height: .5rem;
+                    width: 90%;
+                    position: absolute;
+                    bottom: -2rem;
+                    border-radius: 50rem;
+                    opacity: 0;
+                    visibility: 0;
+                    transition: all .3s;
+                }
+
+                &::after {
+                    content: "";
+                    height: .5rem;
+                    width: 75%;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-48%);
+                    bottom: -3rem;
+                    border-radius: 50rem;
+                    opacity: 0;
+                    visibility: 0;
+                    transition: all .3s;
+                }
+                
+                &:hover:before, &:hover:after {
+                    opacity: 1;
+                    visibility: 1;
+                    background-color: lighten($color: cyan, $amount: 25%);   
+                }
 
                 &--2 {
                     background-color: $color-box-light-pink;
+    
+                    &:hover:before, &:hover::after {
+                        background-color: $color-box-light-pink;
+                    }
                 }
                 
                 &--3 {
                     background-color: $color-box-cyan-light;
+                    
+                    &:hover:before, &:hover::after {
+                        background-color: $color-box-cyan-light;
+                    }
                 }
                 
                 &--4 {
                     background-color: $color-box-orange-light;
+
+                    &:hover:before, &:hover::after {
+                        background-color: $color-box-orange-light;
+                    }
                 }
 
             }
@@ -166,6 +282,10 @@
                 font-weight: bold;
                 display: flex;
                 justify-content: space-between;
+
+                @media (max-width: 25em) {
+                    font-size: 1.3rem;
+                }
                 
                 &-menu {
                     cursor: pointer;
@@ -195,13 +315,29 @@
                 &-main {
                     font-size: 1.4rem;
                     font-weight: bold;
+
+                    @media (max-width: 59em) {
+                        font-size: 1.2rem;
+                    }
+                    
+                    @media (max-width: 25em) {
+                        font-size: 1.6rem;
+                    }
                 }
                 
                 &-sub {
                     margin-top: .5rem;
                     font-size: 1.2rem;
                     font-weight: bold;
+
                     color: $color-light-grey;
+                    @media (max-width: 59em) {
+                        font-size: 1rem;
+                    }
+                    
+                    @media (max-width: 25em) {
+                        font-size: 1.4rem;
+                    }
                 }
             }
 
@@ -212,6 +348,10 @@
                 &--title {
                     font-size: 1.2rem;
                     font-weight: bold;
+                }
+
+                @media (max-width: 25em) {
+                    font-size: 1.4rem;
                 }
 
                 &--bar {
@@ -315,9 +455,18 @@
                     border-radius: 3.2rem;
                     font-weight: bold;
                     color: darken($color-box-light-green, 70%);;
-    
+                    
                     width: 45%;
                     text-align: center;
+
+                    @media (max-width: 58em) {
+                        font-size: 1rem;
+                        padding: 1rem;
+                    }
+                    
+                    @media (max-width: 25em) {
+                        font-size: 1.3rem;
+                    }
     
                     &--2 {
                         background-color: $color-white;

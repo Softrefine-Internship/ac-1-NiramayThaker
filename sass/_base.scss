@@ -7,6 +7,18 @@
 html {
     font-family: sans-serif;
     font-size: 62.5%;
+
+    @media (max-width: 80em) {
+        font-size: 56.25%;
+    }
+
+    @media (max-width: 64em) {
+        font-size: 48%;
+    }
+
+    @media (max-width: 35em) {
+        font-size: 41.8%;
+    }
 }
 
 img {
@@ -18,10 +30,11 @@ img {
     width: 100vw;
     height: 100vh;
     background-color:lighten(#DAD4EF, 2%);
-    z-index: 1000;
+    z-index: -1;
 }
 
 .main-container {
+    z-index: 1;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -35,5 +48,20 @@ img {
     display: grid;
     grid-template-columns: 6rem 7fr 3fr;
     grid-template-rows: 6.4rem 8fr;
-    overflow-y: hidden;
+    overflow-y: hidden; 
+    
+    @media (max-width: 72em) {
+        grid-template-columns: 4rem 6fr 4fr;
+        grid-template-rows: 5.4rem 8fr;
+    }
+
+    @media (max-width: 48em) {
+        grid-template-columns: 2rem 1fr;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    @media (max-width: 22em) {
+        grid-template-columns: 1.6rem 1fr;
+    }
 }

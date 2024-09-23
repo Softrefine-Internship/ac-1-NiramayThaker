@@ -4,13 +4,19 @@
     width: 6rem;
     height: 8rem;
     padding: 1rem;
+    
+    @media (max-width: 48em) {
+        width: 3rem;
+        height: 5rem;
+        padding: 0;
+    }
 }
 
 .vr-break {
     height: 3.2rem;
     width: 0.1rem;
     background-color: grey;
-    margin: 0 1.6rem;
+    margin: 0 1rem;
 }
 
 .nav__header {
@@ -18,7 +24,6 @@
     height: 100%;
 
     &--search {
-
         display: flex;
 
         &-container {
@@ -26,25 +31,36 @@
             border-radius: 2.5rem;
             overflow: hidden;
             width: 25vw;
+            position: relative;
+
+            // @media (max-width: 30em) {
+            //     width: 22vw;
+            //     height: 2.4rem;
+            //     font-size: 1.2rem;
+            //     margin-right: .5rem;
+            // }
         }
         
         &-input {
             flex-shrink: 1;
             border: none;
-            padding: 1rem;
+            padding: 1rem 3.8rem;
             outline: none;
             flex: 1;
             border-radius: 2.5rem 0 0 2.5rem;
             font-size: 1.6rem;
-            
         }
 
-        &--search-icn {
-            height: 2rem;
-            width: 2rem;
-            position: absolute;
-            top: 2rem;
-            left: 10rem;
+        &-symbol {
+
+            &-icn {
+                height: 2rem;
+                width: 2rem;
+                position: absolute;
+                stroke: grey;
+                left: 1rem;
+                top: .8rem;
+            }
         }
 
         &-lbl {
@@ -65,11 +81,24 @@
             height: 3.2rem;
             width: 3.2rem;
             border-radius: 50%;
-        }
 
+            @media (max-width: 48em) {
+                height: 2.8rem;
+                width: 2.8rem;
+            }
+        }
+        
         &-username {
             font-size: 1.4rem;
             font-weight: bold;
+            
+            @media (max-width: 48em) {
+                font-size: 1.2rem;
+            }
+
+            @media (max-width: 30em) {
+                font-size: 1rem;
+            }
 
         }
     }
@@ -79,7 +108,6 @@
         &-nav {
             display: flex;
             align-items: center;
-            
             height: 100%;
         }
         
@@ -90,13 +118,18 @@
             font-size: 2.8rem;
             font-weight: bold;
             margin-left: 4rem;
+            
+            @media (max-width: 48em) {
+                gap: 2rem;
+                margin-left: 2rem;
+                font-size: 2rem;
+            }
         }
         
         &-left {
             margin-left: auto;
             display: flex;
             align-items: center;
-            // gap: 2rem;
 
             &--plus-icn {
                 height: 3rem;
@@ -108,9 +141,17 @@
                     transform: rotate(-135deg);
                     fill: rgba($color: #000000, $alpha: .7);
                 }
-            }
-            
-            
+
+                @media (max-width: 48em) {
+                    height: 2.4rem;
+                    width: 2.4rem;
+                }
+
+                @media (max-width: 30em) {
+                    height: 2rem;
+                    width: 2rem;
+                }
+            }           
             
             &--bell-icn {
                 height: 2.4rem;
@@ -118,11 +159,18 @@
                 margin-left: 1rem;
                 cursor: pointer;
                 transition: all .5s;
+                
+                @media (max-width: 30em) {
+                    height: 2rem;
+                    width: 2rem;
+                    margin-left: .1rem;
+                }
             }
-
+            
             &--bell-icn:hover {
                 transform: rotate(30deg);
                 color: $color-grey;
+                margin-left: .5rem;
             }
 
             &--icn {
