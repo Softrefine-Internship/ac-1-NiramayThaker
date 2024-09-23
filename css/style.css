@@ -33,12 +33,27 @@
 .msg__section--header-icns-icn-search:hover {
   transform: scale(1.2);
 }
+.msg__section--lobby {
+  height: 48%;
+}
+.msg__section--lobby-msgs {
+  overflow-y: scroll;
+}
+.msg__section--lobby-msgs::-webkit-scrollbar {
+  display: none;
+}
 .msg__section--lobby-msgs--msg {
+  z-index: 1000;
   display: flex;
   align-items: center;
   gap: 1.8rem;
   padding: 2rem;
   border-bottom: 0.1rem solid rgb(217.25, 217.25, 217.25);
+}
+.msg__section--lobby-msgs--msg:hover {
+  transform: scale(1.2);
+  background: #fff;
+  border-radius: 20%;
 }
 .msg__section--lobby-msgs--msg-profile-photo {
   height: 4.5rem;
@@ -517,7 +532,6 @@
 html {
   font-family: sans-serif;
   font-size: 62.5%;
-  /* overflow-x: hidden; */
 }
 
 img {
@@ -545,7 +559,7 @@ img {
   display: grid;
   grid-template-columns: 6rem 7fr 3fr;
   grid-template-rows: 6.4rem 8fr;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

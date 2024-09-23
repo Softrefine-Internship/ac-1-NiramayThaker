@@ -7,7 +7,6 @@
 html {
     font-family: sans-serif;
     font-size: 62.5%;
-    /* overflow-x: hidden; */
 }
 
 img {
@@ -36,5 +35,5 @@ img {
     display: grid;
     grid-template-columns: 6rem 7fr 3fr;
     grid-template-rows: 6.4rem 8fr;
-    overflow: hidden;
+    overflow-y: hidden;
 }
