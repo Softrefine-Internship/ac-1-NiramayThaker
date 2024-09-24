@@ -8,15 +8,15 @@ html {
     font-family: sans-serif;
     font-size: 62.5%;
 
-    @media (max-width: 80em) {
+    @media (max-width: 1280px) {
         font-size: 56.25%;
     }
 
-    @media (max-width: 64em) {
+    @media (max-width: 1024px) {
         font-size: 48%;
     }
 
-    @media (max-width: 35em) {
+    @media (max-width: 560px) {
         font-size: 41.8%;
     }
 }
@@ -50,18 +50,18 @@ img {
     grid-template-rows: 6.4rem 8fr;
     overflow-y: hidden; 
     
-    @media (max-width: 72em) {
+    @media (max-width: 1152px) {
         grid-template-columns: 4rem 6fr 4fr;
         grid-template-rows: 5.4rem 8fr;
     }
 
-    @media (max-width: 48em) {
+    @media (max-width: 768px) {
         grid-template-columns: 2rem 1fr;
         width: 100vw;
         height: 100vh;
     }
     
-    @media (max-width: 22em) {
+    @media (max-width: 352px) {
         grid-template-columns: 1.6rem 1fr;
     }
 }

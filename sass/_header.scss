@@ -5,7 +5,7 @@
     height: 8rem;
     padding: 1rem;
     
-    @media (max-width: 48em) {
+    @media (max-width: 768px) {
         width: 3rem;
         height: 5rem;
         padding: 0;
@@ -32,13 +32,6 @@
             overflow: hidden;
             width: 25vw;
             position: relative;
-
-            // @media (max-width: 30em) {
-            //     width: 22vw;
-            //     height: 2.4rem;
-            //     font-size: 1.2rem;
-            //     margin-right: .5rem;
-            // }
         }
         
         &-input {
@@ -68,9 +61,7 @@
             z-index: 10;
             position: relative;
         }
-
     }
-
 
     &--profile {
         display: flex;
@@ -82,7 +73,7 @@
             width: 3.2rem;
             border-radius: 50%;
 
-            @media (max-width: 48em) {
+            @media (max-width: 768px) {
                 height: 2.8rem;
                 width: 2.8rem;
             }
@@ -92,14 +83,13 @@
             font-size: 1.4rem;
             font-weight: bold;
             
-            @media (max-width: 48em) {
+            @media (max-width: 768px) {
                 font-size: 1.2rem;
             }
 
-            @media (max-width: 30em) {
+            @media (max-width: 480px) {
                 font-size: 1rem;
             }
-
         }
     }
 
@@ -119,7 +109,7 @@
             font-weight: bold;
             margin-left: 4rem;
             
-            @media (max-width: 48em) {
+            @media (max-width: 768px) {
                 gap: 2rem;
                 margin-left: 2rem;
                 font-size: 2rem;
@@ -142,12 +132,12 @@
                     fill: rgba($color: #000000, $alpha: .7);
                 }
 
-                @media (max-width: 48em) {
+                @media (max-width: 768px1) {
                     height: 2.4rem;
                     width: 2.4rem;
                 }
 
-                @media (max-width: 30em) {
+                @media (max-width: 480px) {
                     height: 2rem;
                     width: 2rem;
                 }
@@ -160,7 +150,7 @@
                 cursor: pointer;
                 transition: all .5s;
                 
-                @media (max-width: 30em) {
+                @media (max-width: 480px) {
                     height: 2rem;
                     width: 2rem;
                     margin-left: .1rem;
@@ -187,9 +177,7 @@
                 right: .3rem;
                 border-radius: 50%;
             }
-
         }
-
     }
 }
 
