@@ -5,7 +5,7 @@
 }
 
 html {
-    font-family: sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 62.5%;
 
     @media (max-width: 1280px) {
@@ -42,7 +42,7 @@ img {
     padding: .5rem 2rem;
     width: 90vw;
     height: 90vh;
-    background-color: lighten($color: $color-box-light-green, $amount: 13%);
+    background-color: lighten($color: $color-box-light-green, $amount: 15%);
     border-radius: 3rem;
     
     display: grid;
@@ -51,14 +51,15 @@ img {
     overflow-y: hidden; 
     
     @media (max-width: 1152px) {
-        grid-template-columns: 4rem 6fr 4fr;
+        grid-template-columns: 6.4rem 6fr 4fr;
         grid-template-rows: 5.4rem 8fr;
     }
 
     @media (max-width: 768px) {
         grid-template-columns: 2rem 1fr;
         width: 100vw;
-        height: 100vh;
+        height: 100svh;
+        border-radius: 0;
     }
     
     @media (max-width: 352px) {

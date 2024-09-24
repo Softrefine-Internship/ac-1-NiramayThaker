@@ -13,20 +13,18 @@
     grid-column: 2;
     grid-row: 2;
     width: 100%;
-    height: 78vh;  
+    height: 100vh;
     background-color: $color-white;
     border-radius: 3rem 3rem 0 0;
     margin-left: 1.5rem;
     margin-top: 1rem;
     
-    @media (max-width: 1200px) {
-        height: 83vh;  
-        border-radius: 3rem 3rem 0 0;
+    @media (max-width: 1150px) {
+        height: 100%;  
     }
 
-    @media (max-width: 800px) {
-        height: 100vh;  
-        border-radius: 3rem 3rem 0 0;
+    @media (min-width: 1150px) {
+        height: 100%;  
     }
 
     &--project {
@@ -44,7 +42,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
 
             :first-child {
                 font-size: 2rem;
@@ -71,7 +68,7 @@
             }
             
             @media (max-width: 560px) {
-                gap: 1rem;
+                gap: 1.4rem;
             }
             
             &--item {
@@ -85,21 +82,22 @@
                     @media (max-width: 560px1) {
                         font-size: 1.4rem;
                     }   
-
-                    @media (max-width: 400px) {
-                        font-size: 1.2rem;
-                    }   
                 }
                 
                 :last-child {
-                    margin-top: .5rem;
+                    margin-top: .2rem;
                     font-size: 1.1rem;
                     font-weight: bold;
                     color: $color-light-grey;
                     
-                    @media (max-width: 400px1) {
-                        font-size: 1rem;
+                    @media (max-width: 780px) {
+                        font-size: 1.1rem;
                     }   
+
+                    @media (max-width: 600px) {
+                        font-size: 1.2rem;
+                    }   
+
                 }
 
                 &:not(:nth-child(4)) {
@@ -110,13 +108,12 @@
                         border: 0.2rem solid $color-light-grey;
                         position: absolute;
                         border-radius: 20%;
-                        top: 2.6rem;
+                        top: 3rem;
                         left: 10rem;
                         transform: rotate(45deg);
-
+                        
                         @media (max-width: 1152px) {
-                            opacity: 0;
-                            visibility: 0;
+                            visibility: hidden;
                         }
                     }
 
@@ -125,51 +122,46 @@
 
             &--icn {
                 display: flex;
-                gap: 2rem;
-                // align-items: center;
+                gap: 1.5rem;
                 margin-left: auto;
-
+                align-items: center;
+                justify-content: center;
+                
                 @media (max-width: 400px) {
                     gap: .5rem;
                 }   
 
+                // @media (max-width: 400px) {
+                //     flex-direction: column;
+                // }   
+                
                 &-1 {
                     cursor: pointer;
                     height: 2rem;
                     width: 2rem;
-                    transition: all .3s;
                     
-                    &:hover {
-                        transform: scale(1.2);
-                    }
-                    
+                    // @media (max-width: 400px) {
+                    //     height: 1.6rem;
+                    //     width: 1.6rem;
+                    // }   
                 }
-
+                
                 &-more-menu {
-                    margin-top: .3rem;
-                    display: flex;
-                    width: 1.5rem;
-                    height: 1.5rem;
-                    flex-wrap: wrap;
+                    width:1.6rem;
+                    height: 1.6rem;
                     cursor: pointer;
-                    transition: all .3s;   
-
-                    &:hover {
-                        transform: scale(1.2);
-                    }
                     
-                    &-2 {
-                        height: .7rem;
-                        width: .7rem;
-                        border-radius: 50%;
-                        border: 0.3rem solid $color-black;
-                    }
+                    // @media (max-width: 400px) {
+                    //     margin-top: -1rem;
+                    //     height: 1.3rem;
+                    //     width: 1.3rem;
+                    // }   
                 }
             }
         }
 
         &-progress {
-            height:62vh;
+            height:100vh;
             width: 100%;
             display: flex;
             flex-wrap: wrap;
@@ -178,20 +170,31 @@
             justify-content: space-evenly;
             margin-top: 1rem;
             padding-top: 3rem;
+            align-items: start;
+            padding-bottom: 100rem;
+               
+            @media (min-width: 1024px) {
+                height: 80vh;  
+                padding-bottom: 20rem;
+            }
 
-            
             @media (max-width: 1024px) {
                 height: 80vh;  
+                padding-bottom: 20rem;
             }
 
-            @media (max-width: 800px) {
-                height: 100vh;  
-            }
-
-            
             @media (max-width: 960px) {
-                gap: 1rem;
+                gap: 2rem;
             }
+            
+            @media (max-width: 900px) {
+                height: 100vh;  
+                padding-bottom: 30rem;
+            }
+
+            @media (max-width: 750px), (max-width: 650px) {
+                padding-bottom: 30rem;
+            }           
 
             
             @media (max-width: 560px) {
@@ -204,31 +207,36 @@
 
             &-container {
                 border-radius: 3rem;
-                padding: 2.4rem 1.4rem;
                 margin-bottom: 2.5rem;
                 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-                width: 24rem;
-                height: 26rem;
+                width: 25rem;
+                height: 27.5rem;
+                margin-left: 1rem;
                 cursor: pointer;
                 transition: all .3s;
                 position: relative;
                 
-                @media (max-width: 960px) {
-                    width: 24rem;
-                    height: 24rem;
-                    margin-bottom: 1.5rem;
+                @media (max-width: 900px) {
+                    width: 27rem;
+                    margin-left: 1.6rem;
+                }
+                
+                @media (max-width: 580px) {
+                    width: 27rem;
                 }
 
-                @media (max-width: 400px) {
-                    width: 26rem;
-                    height: 26rem;
-                }
+                // @media (max-width: 400px) {
+                //     width: 27rem;
+                //     height: 30rem;
+                // }
                 
                 &::before {
                     content: "";
-                    height: .5rem;
-                    width: 90%;
+                    height: .3rem;
+                    width: 75%;
                     position: absolute;
+                    left: 50%;
+                    transform: translateX(-48%);
                     bottom: -2rem;
                     border-radius: 50rem;
                     opacity: 0;
@@ -238,8 +246,8 @@
 
                 &::after {
                     content: "";
-                    height: .5rem;
-                    width: 75%;
+                    height: .3rem;
+                    width: 55%;
                     position: absolute;
                     left: 50%;
                     transform: translateX(-48%);
@@ -283,14 +291,15 @@
             }
 
             &-head {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
                 color: $color-light-grey;
                 font-weight: bold;
                 display: flex;
                 justify-content: space-between;
+                padding: 1.6rem 1.4rem;
 
-                @media (max-width: 400px) {
-                    font-size: 1.3rem;
+                @media (max-width: 900px) {
+                    font-size: 1.4rem;
                 }
                 
                 &-menu {
@@ -317,43 +326,56 @@
             &-center {
                 margin-top: 3.2rem;
                 text-align: center;
+                
+                @media (max-width: 960px) {
+                    margin-top: 2.5rem;
+                }
+                
+                @media (max-width: 900px) {
+                    margin-top: 2.6rem;
+                }
+
+                @media (max-width: 400px) {
+                    margin-top: 1.6rem;
+                }
 
                 &-main {
-                    font-size: 1.4rem;
+                    font-size: 1.6rem;
                     font-weight: bold;
-
-                    @media (max-width: 960px) {
-                        font-size: 1.2rem;
-                    }
-                    
-                    @media (max-width: 400px) {
-                        font-size: 1.6rem;
-                    }
                 }
                 
                 &-sub {
                     margin-top: .5rem;
-                    font-size: 1.2rem;
+                    font-size: 1.4rem;
                     font-weight: bold;
 
                     color: $color-light-grey;
-                    @media (max-width: 960px) {
-                        font-size: 1rem;
-                    }
+                    // @media (max-width: 960px) {
+                    //     font-size: 1.3rem;
+                    // }
+
+                    // @media (max-width: 900px) {
+                    //     font-size: 1.5rem;
+                    // }
                     
-                    @media (max-width: 400px) {
-                        font-size: 1.4rem;
-                    }
+                    // @media (max-width: 400px) {
+                    //     font-size: 1.4rem;
+                    // }
                 }
             }
 
             &-bar {
                 margin-top: 2rem;
                 width: 100%;
+                padding: 0 1.4rem;
             
                 &--title {
                     font-size: 1.2rem;
                     font-weight: bold;
+                }
+                
+                @media (max-width: 900px) {
+                    font-size: 1.7rem;
                 }
 
                 @media (max-width: 400px) {
@@ -403,11 +425,16 @@
                     font-size: 1.2rem;
                     font-weight: bold;
                     text-align: end;
+                    
+                    @media (max-width: 1000px) {
+                        font-size: 1.5rem;
+                    }
+                    
                 }
             }
 
             &-users {
-
+                padding: 0 1.4rem;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -445,8 +472,7 @@
                         width: 2.4rem;
                         border-radius: 50%;
                         border: 0.2rem solid $color-white;
-    
-    
+
                         &:nth-child(2) {
                             margin-left: -1rem;
                         }
@@ -459,19 +485,26 @@
                     padding: 1rem 1.2rem;
                     font-size: 1.2rem;
                     border-radius: 3.2rem;
-                    font-weight: bold;
+                    font-weight: 600;
                     color: darken($color-box-light-green, 70%);;
                     
                     width: 45%;
                     text-align: center;
-
+                    
                     @media (max-width: 960px) {
-                        font-size: 1rem;
+                        width: 48%;
+                        font-size: 1.2rem;
+                        padding: 1rem;
+                    }
+                    
+                    @media (max-width: 900px) {
+                        width: 49%;
+                        font-size: 1.2rem;
                         padding: 1rem;
                     }
                     
                     @media (max-width: 400px) {
-                        font-size: 1.3rem;
+                        font-size: 1.2rem;
                     }
     
                     &--2 {

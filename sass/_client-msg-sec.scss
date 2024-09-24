@@ -33,10 +33,10 @@
                 &-search {
                     height: 2rem;
                     width: 2rem;
-                    transition: transform .3s;
+                    transition: transform .3s ease-in;
 
                     &:hover {
-                        transform: scale(1.2);
+                        color: $color-grey;
                     }
                 }
             }
@@ -44,12 +44,12 @@
     }
 
     &--lobby {
-
         height: 85%;
         width: 100%;
         cursor: pointer;
         z-index: -200;
         overflow-y: scroll;
+        
         
         &::-webkit-scrollbar {
             display: none;
@@ -64,15 +64,17 @@
                 gap: 1.8rem;
                 padding: 2.2rem 2.8rem;
                 border-bottom: .1rem solid lighten(grey, 35%);
-                transition: all .2s ease-in;
+                transition: all .5s ease-out;
 
                 &:hover {
-                    transform: scale(1.01) translateX(.2rem);
+                    transform: scale(1.02);
                     background: #fff;
                     border-radius: 2rem;
-                    padding: 2.4rem 3rem;
-                    margin-top: 1rem;
                     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+                }
+
+                &:hover &-star-icn {
+                    fill: black;
                 }
                 
                 &-profile-photo {
@@ -86,10 +88,6 @@
                     width: 1.6rem;
                     margin-left: auto;
                     margin-top: -2rem;
-
-                    &:hover {
-                        fill: black;
-                    }
                 }
                 
                 &-block {
