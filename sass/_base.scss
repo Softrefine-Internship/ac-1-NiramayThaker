@@ -21,6 +21,11 @@ html {
     }
 }
 
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 img {
     cursor: pointer;
     object-fit: cover;
